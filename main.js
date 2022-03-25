@@ -8,7 +8,7 @@ function init(event) {
 
 async function getData() {
   let result = await fetch(
-    "http://thordiskara.com/recreate-bikeshop/wp-json/wp/v2/bike?_embed"
+    "https://thordiskara.com/recreate-bikeshop/wp-json/wp/v2/bike?_embed"
   );
   showBike(await result.json());
 }
