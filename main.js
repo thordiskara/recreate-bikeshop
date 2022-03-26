@@ -8,12 +8,12 @@ function init(event) {
 
 async function getData() {
   let result = await fetch(
-    "https://thordiskara.com/recreate-bikeshop/wp-json/wp/v2/bike?_embed"
+    "https://thordiskara.com/recreate-bikeshop/recreate-bikeshop/wp-json/wp/v2/bike?_embed"
   );
   showBike(await result.json());
 }
 
-async function showBike(bikeArray) {
+function showBike(bikeArray) {
   console.log(bikeArray);
   const template = document.querySelector(".biketemplate").content;
   const parentElement = document.querySelector("main");
